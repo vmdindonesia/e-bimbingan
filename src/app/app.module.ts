@@ -8,13 +8,19 @@ import { ButtonModule } from 'primeng/primeng';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { ErrorComponent } from './error/error.component';
+import { EmptyComponent } from './empty/empty.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    NotFoundComponent,
+    ErrorComponent,
+    EmptyComponent
   ],
   imports: [
     BrowserModule,
