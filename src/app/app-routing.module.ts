@@ -8,16 +8,31 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { ErrorComponent } from './error/error.component';
 import { EmptyComponent } from './empty/empty.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { SampleComponent } from './sample/sample.component';
+import { FormsComponent } from './forms/forms.component';
+import { DataComponent } from './data/data.component';
+import { PanelsComponent } from './panels/panels.component';
+import { OverlaysComponent } from './overlays/overlays.component';
+import { MenusComponent } from './menus/menus.component';
+import { ChartsComponent } from './charts/charts.component';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' }, //Ini defaullt page
+  { path: '', redirectTo: '/forms', pathMatch: 'full' }, //Ini defaullt page
   { path: 'login', component: LoginComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'home', component: HomeComponent },
   { path: 'not-found', component: NotFoundComponent },
   { path: 'error', component: ErrorComponent },
-  { path: 'empty', component: EmptyComponent }
+  { path: 'empty', component: EmptyComponent },
+  { path: 'sample', component: SampleComponent },
+  { path: 'forms', component: FormsComponent },
+  { path: 'data', component: DataComponent },
+  { path: 'panels', component: PanelsComponent },
+  { path: 'overlays', component: OverlaysComponent },
+  { path: 'menus', component: MenusComponent },
+  { path: 'charts', component: ChartsComponent }
+  
 ];
 
 @NgModule({
