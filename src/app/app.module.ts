@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
+import {HttpModule} from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import 'rxjs/add/operator/toPromise';
@@ -87,6 +88,18 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { ErrorComponent } from './error/error.component';
 import { EmptyComponent } from './empty/empty.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { SampleComponent } from './sample/sample.component';
+import { FormsComponent } from './forms/forms.component';
+import { DataComponent } from './data/data.component';
+import { PanelsComponent } from './panels/panels.component';
+import { OverlaysComponent } from './overlays/overlays.component';
+import { MenusComponent } from './menus/menus.component';
+import { ChartsComponent } from './charts/charts.component';
+
+import {CarService} from './../service/service/carservice';
+import {CountryService} from './../service/service/countryservice';
+import {NodeService} from './../service/service/nodeservice';
+
 import { UtilsComponent } from './utils/utils.component';
 import { MessagesComponent } from './messages/messages.component';
 import { FileComponent } from './file/file.component';
@@ -107,16 +120,24 @@ import { MiscComponent } from './misc/misc.component';
     ErrorComponent,
     EmptyComponent,
     DashboardComponent,
+    SampleComponent,
+    FormsComponent,
+    DataComponent,
+    PanelsComponent,
+    OverlaysComponent,
+    MenusComponent,
+    ChartsComponent,
     UtilsComponent,
     MessagesComponent,
     FileComponent,
-    MiscComponent,
+    MiscComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
     AppRoutingModule,
+    HttpModule,
     HttpClientModule,
     ButtonModule,
     BrowserAnimationsModule,
@@ -186,7 +207,9 @@ import { MiscComponent } from './misc/misc.component';
     TreeModule,
     TreeTableModule
   ],
-  providers: [],
+  providers: [
+    CarService, CountryService, NodeService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
