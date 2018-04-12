@@ -87,6 +87,10 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { ErrorComponent } from './error/error.component';
 import { EmptyComponent } from './empty/empty.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { UtilsComponent } from './utils/utils.component';
+import { MessagesComponent } from './messages/messages.component';
+import { FileComponent } from './file/file.component';
+import { MiscComponent } from './misc/misc.component';
 
 @NgModule({
   declarations: [
@@ -103,6 +107,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     ErrorComponent,
     EmptyComponent,
     DashboardComponent,
+    UtilsComponent,
+    MessagesComponent,
+    FileComponent,
+    MiscComponent,
   ],
   imports: [
     BrowserModule,
