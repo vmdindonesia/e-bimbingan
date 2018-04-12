@@ -100,6 +100,11 @@ import {CarService} from './../service/service/carservice';
 import {CountryService} from './../service/service/countryservice';
 import {NodeService} from './../service/service/nodeservice';
 
+import { UtilsComponent } from './utils/utils.component';
+import { MessagesComponent } from './messages/messages.component';
+import { FileComponent } from './file/file.component';
+import { MiscComponent } from './misc/misc.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -122,6 +127,10 @@ import {NodeService} from './../service/service/nodeservice';
     OverlaysComponent,
     MenusComponent,
     ChartsComponent,
+    UtilsComponent,
+    MessagesComponent,
+    FileComponent,
+    MiscComponent
   ],
   imports: [
     BrowserModule,
