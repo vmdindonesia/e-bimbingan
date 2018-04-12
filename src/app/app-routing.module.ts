@@ -18,14 +18,7 @@ import { ChartsComponent } from './charts/charts.component';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: '/forms', pathMatch: 'full' }, //Ini defaullt page
-import { UtilsComponent } from './utils/utils.component';
-import { MessagesComponent } from './messages/messages.component';
-import { FileComponent } from './file/file.component';
-import { MiscComponent } from './misc/misc.component'
-
-const routes: Routes = [
-  { path: '', redirectTo: '/misc', pathMatch: 'full' }, //Ini defaullt page
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' }, //Ini defaullt page
   { path: 'login', component: LoginComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'home', component: HomeComponent },
@@ -38,7 +31,7 @@ const routes: Routes = [
   { path: 'panels', component: PanelsComponent },
   { path: 'overlays', component: OverlaysComponent },
   { path: 'menus', component: MenusComponent },
-  { path: 'charts', component: ChartsComponent }
+  { path: 'charts', component: ChartsComponent },
   { path: 'utils', component: UtilsComponent },
   { path: 'messages', component: MessagesComponent },
   { path: 'file', component: FileComponent },
