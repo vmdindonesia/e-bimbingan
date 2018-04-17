@@ -23,7 +23,7 @@ import { MiscComponent } from './misc/misc.component';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' }, // Ini defaullt page
+  { path: '', redirectTo: '/login', pathMatch: 'full' }, // Ini defaullt page
   { path: 'login', component: LoginComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'home', component: HomeComponent },

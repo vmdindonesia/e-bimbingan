@@ -6,8 +6,8 @@ import {Message} from 'primeng/primeng';
   templateUrl: './file.component.html',
   styleUrls: ['./file.component.css']
 })
-export class FileComponent implements OnInit { 
-  
+export class FileComponent implements OnInit {
+
   msgs: Message[];
 
   uploadedFiles: any[] = [];

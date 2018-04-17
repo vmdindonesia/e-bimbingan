@@ -599,7 +599,7 @@
 
 @media (min-width: 1441px) {
   .login-body {
-    background-size: contain; } }
+    background-size: 100%; } }
 @media (max-width: 640px) {
   .login-body {
     padding-top: 150px; }
