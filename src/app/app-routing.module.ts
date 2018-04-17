@@ -15,10 +15,15 @@ import { PanelsComponent } from './panels/panels.component';
 import { OverlaysComponent } from './overlays/overlays.component';
 import { MenusComponent } from './menus/menus.component';
 import { ChartsComponent } from './charts/charts.component';
+import { UtilsComponent } from './utils/utils.component';
+import { MessagesComponent } from './messages/messages.component';
+import { FileComponent } from './file/file.component';
+import { MiscComponent } from './misc/misc.component';
+
 
 
 const routes: Routes = [
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' }, //Ini defaullt page
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' }, // Ini defaullt page
   { path: 'login', component: LoginComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'home', component: HomeComponent },
@@ -35,12 +40,12 @@ const routes: Routes = [
   { path: 'utils', component: UtilsComponent },
   { path: 'messages', component: MessagesComponent },
   { path: 'file', component: FileComponent },
-  { path: 'misc', component: MiscComponent}
+  { path: 'misc', component: MiscComponent }
 ];
 
 @NgModule({
-  exports: [ RouterModule ],
-  imports: [ RouterModule.forRoot(routes) ]
+  exports: [RouterModule],
+  imports: [RouterModule.forRoot(routes)]
 })
 
 export class AppRoutingModule { }
