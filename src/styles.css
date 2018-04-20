@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+.loader {
+    width: 30px; 
+    height: 30px;
+    margin: 0 auto;
+}
+
+.text-error {
+    margin: 0 auto;
+    color: red;
+}

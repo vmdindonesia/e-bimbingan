@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
-import {HttpModule} from '@angular/http';
+import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import 'rxjs/add/operator/toPromise';
@@ -76,11 +76,11 @@ import { TreeModule } from 'primeng/primeng';
 import { TreeTableModule } from 'primeng/primeng';
 
 // Import Pages
-import {AppMenuComponent, AppSubMenuComponent} from './app.menu.component';
-import {AppSideBarComponent} from './app.sidebar.component';
-import {AppSidebartabcontentComponent} from './app.sidebartabcontent.component';
-import {AppTopbarComponent} from './app.topbar.component';
-import {AppFooterComponent} from './app.footer.component';
+import { AppMenuComponent, AppSubMenuComponent } from './app.menu.component';
+import { AppSideBarComponent } from './app.sidebar.component';
+import { AppSidebartabcontentComponent } from './app.sidebartabcontent.component';
+import { AppTopbarComponent } from './app.topbar.component';
+import { AppFooterComponent } from './app.footer.component';
 
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
@@ -96,9 +96,13 @@ import { OverlaysComponent } from './overlays/overlays.component';
 import { MenusComponent } from './menus/menus.component';
 import { ChartsComponent } from './charts/charts.component';
 
-import {CarService} from './../service/service/carservice';
-import {CountryService} from './../service/service/countryservice';
-import {NodeService} from './../service/service/nodeservice';
+// Services
+import { CarService } from './../service/service/carservice';
+import { CountryService } from './../service/service/countryservice';
+import { NodeService } from './../service/service/nodeservice';
+import { AuthenticationService } from './../service/service/AuthenticationService';
+import { AuthGuard } from './../service/service/index';
+import { AuthService } from './../service/service/index';
 
 import { UtilsComponent } from './utils/utils.component';
 import { MessagesComponent } from './messages/messages.component';
@@ -208,7 +212,12 @@ import { MiscComponent } from './misc/misc.component';
     TreeTableModule
   ],
   providers: [
-    CarService, CountryService, NodeService
+    CarService,
+    CountryService,
+    NodeService,
+    AuthenticationService,
+    AuthService,
+    AuthGuard
   ],
   bootstrap: [AppComponent]
 })

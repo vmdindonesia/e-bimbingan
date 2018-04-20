@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {AppComponent} from './app.component';
-
+import { AuthenticationService } from './../service/service/index';
 @Component({
     selector: 'app-topbar',
     template: `
@@ -24,7 +24,7 @@ import {AppComponent} from './app.component';
                             <img src="assets/layout/images/profile-image.png">
                         </div>
                         <div class="profile-info">
-                            <span class="topbar-item-name profile-name">Claire White</span>
+                            <span class="topbar-item-name profile-name">{{username}}</span>
                             <span class="topbar-item-name profile-role">System Admin</span>
                         </div>
                     </a>
@@ -176,6 +176,16 @@ import {AppComponent} from './app.component';
 })
 export class AppTopbarComponent {
 
-    constructor(public app: AppComponent) {}
+    public username: string;
+    constructor(
+        public app: AppComponent,
+        private AuthenticationServices: AuthenticationService
+    ) {
+        AuthenticationServices.getLoggedInName.subscribe(name => this.changeName(name));
+    }
+
+    private changeName(name: string): void {
+        this.username = name;
+    }
 
 }

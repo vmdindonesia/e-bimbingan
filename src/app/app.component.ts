@@ -1,5 +1,5 @@
 import { Component, AfterViewInit, Renderer, OnDestroy } from '@angular/core';
-
+import { AuthGuard } from './../service/service/index';
 enum MenuOrientation {
   STATIC,
   OVERLAY
@@ -31,7 +31,12 @@ export class AppComponent implements AfterViewInit, OnDestroy {
 
   documentClickListener: Function;
 
-  constructor(public renderer: Renderer) { }
+  constructor(
+    public renderer: Renderer,
+    public AuthGuards: AuthGuard
+  ) {
+    this.AuthGuards.isLogin();
+  }
 
   ngAfterViewInit() {
     this.documentClickListener = this.renderer.listenGlobal('body', 'click', (event) => {

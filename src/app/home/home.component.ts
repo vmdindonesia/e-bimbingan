@@ -1,15 +1,26 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-home',
-  templateUrl: './home.component.html',
+  template: `
+      <div class="layout-wrapper" [ngClass]="{'layout-wrapper-menu-active':sidebarActive,
+                                          'layout-overlay-menu':overlay}">
+
+        <app-topbar></app-topbar>
+
+        <app-sidebar></app-sidebar>
+
+        <div class="layout-main">
+            <div class="layout-main-content">
+                <router-outlet></router-outlet>
+
+                <app-footer></app-footer>
+
+            </div>
+        </div>
+
+    </div>
+  `,
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
-}
+export class HomeComponent { }
