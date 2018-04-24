@@ -47,7 +47,6 @@ export class LoginComponent implements OnInit {
         if (this.AuthServices.isLoggedIn) {
           this.loading = true;
           this.loader = true;
-          this.Routers.navigate(['/dashboard']);
         }
       });
     }, (error) => {
