@@ -1,12 +1,12 @@
-import {Component} from '@angular/core';
-import {AppComponent} from './app.component';
+import { Component } from '@angular/core';
+import { HomeComponent } from './home/home.component';
 
 @Component({
     selector: 'app-sidebar',
-      templateUrl: './app.sidebar.component.html'
+    templateUrl: './app.sidebar.component.html'
 })
 export class AppSideBarComponent {
 
-    constructor(public app: AppComponent) {}
+    constructor(public app: HomeComponent) { }
 
 }
