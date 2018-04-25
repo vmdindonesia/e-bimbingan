@@ -16,8 +16,8 @@ export class AuthenticationService {
             .map(res => {
                 const dataLogin = res.json();
                 if (res.json()) {
-                    localStorage.setItem('VMDDEVELOPER', dataLogin);
-                    console.log(dataLogin.permission, 'Data Login');
+                    console.log(res.json(), 'Data Login');
+                    localStorage.setItem('VMDDEVELOPER', JSON.stringify(dataLogin));
                     const permissions = dataLogin.permission;
                     switch (permissions) {
                         case 'mahasiswa':
@@ -39,6 +39,6 @@ export class AuthenticationService {
 
     isLogout() {
         localStorage.removeItem('VMDDEVELOPER');
-        return  this.Routers.navigate(['/login']);
+        return this.Routers.navigate(['/login']);
     }
 }

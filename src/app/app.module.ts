@@ -79,7 +79,6 @@ import { TreeTableModule } from 'primeng/primeng';
 import { AppMenuComponent, AppSubMenuComponent } from './app.menu.component';
 import { AppSideBarComponent } from './app.sidebar.component';
 import { AppSidebartabcontentComponent } from './app.sidebartabcontent.component';
-import { AppTopbarComponent } from './app.topbar.component';
 import { AppFooterComponent } from './app.footer.component';
 
 import { HomeComponent } from './home/home.component';
@@ -108,6 +107,7 @@ import { UtilsComponent } from './utils/utils.component';
 import { MessagesComponent } from './messages/messages.component';
 import { FileComponent } from './file/file.component';
 import { MiscComponent } from './misc/misc.component';
+import { TopbarComponent } from './topbar/topbar.component';
 
 @NgModule({
   declarations: [
@@ -116,7 +116,6 @@ import { MiscComponent } from './misc/misc.component';
     AppSubMenuComponent,
     AppSideBarComponent,
     AppSidebartabcontentComponent,
-    AppTopbarComponent,
     AppFooterComponent,
     HomeComponent,
     LoginComponent,
@@ -134,7 +133,8 @@ import { MiscComponent } from './misc/misc.component';
     UtilsComponent,
     MessagesComponent,
     FileComponent,
-    MiscComponent
+    MiscComponent,
+    TopbarComponent
   ],
   imports: [
     BrowserModule,

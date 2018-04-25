@@ -1,10 +1,4 @@
-import {Component} from '@angular/core';
-import {AppComponent} from './app.component';
-import { AuthenticationService } from './../service/service/AuthenticationService';
-@Component({
-    selector: 'app-topbar',
-    template: `
-        <div class="topbar clearfix">
+<div class="topbar clearfix">
             <div class="logo">
                 <a href="#">
                     <img src="assets/layout/images/logo.png">
@@ -25,7 +19,7 @@ import { AuthenticationService } from './../service/service/AuthenticationServic
                         </div>
                         <div class="profile-info">
                             <span class="topbar-item-name profile-name">{{username}}</span>
-                            <span class="topbar-item-name profile-role">System Admin</span>
+                            <span class="topbar-item-name profile-role">{{role}}</span>
                         </div>
                     </a>
 
@@ -47,18 +41,3 @@ import { AuthenticationService } from './../service/service/AuthenticationServic
                 </li>
             </ul>
         </div>
-    `
-})
-export class AppTopbarComponent {
-
-    public username: string;
-    constructor(
-        public app: AppComponent,
-        public AuthenticationServices: AuthenticationService
-    ) { }
-
-    logout() {
-        this.AuthenticationServices.isLogout();
-    }
-
-}
