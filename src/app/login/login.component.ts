@@ -42,8 +42,7 @@ export class LoginComponent implements OnInit {
     this.textError = true;
     this.loading = false;
     this.loader = false;
-    this.AuthenticationServices.isLogin(this.username, this.password).subscribe((res) => {
-      console.log(res, 'RES KUY');
+    this.AuthenticationServices.isLogin(this.username, this.password).subscribe((res: any) => {
       this.AuthServices.isLogin().subscribe(() => {
         if (this.AuthServices.isLoggedIn) {
           this.loading = true;
