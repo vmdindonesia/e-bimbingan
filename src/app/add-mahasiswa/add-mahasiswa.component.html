@@ -1,0 +1,67 @@
+<div class="ui-g ui-fluid">
+  <div class="ui-g-12 ui-lg-12">
+    <div class="card card-w-title">
+      <h1>Formulir Tambah Mahasiswa</h1>
+      <div class="ui-g form-group">
+        <div class="ui-g-12 ui-md-6">
+          <span class="md-inputfield">
+            <input type="text" pInputText>
+            <label>Nim</label>
+          </span>
+        </div>
+        <div class="ui-g-12 ui-md-6">
+          <span class="md-inputfield">
+            <input type="text" pInputText>
+            <label>Jurusan</label>
+          </span>
+        </div>
+        <div></div>
+        <div class="ui-g-12 ui-md-12">
+          <span class="md-inputfield">
+            <input type="text" pInputText>
+            <label>Nama Lengkap</label>
+          </span>
+        </div>
+        <div class="ui-g-12 ui-md-12"></div>
+        <div class="ui-g-12 ui-md-6">
+          <span class="md-inputfield">
+            <input type="number" pInputText>
+            <label>No Telepon</label>
+          </span>
+        </div>
+        <div class="ui-g-12 ui-md-6">
+          <span class="md-inputfield">
+            <textarea [rows]="1" [cols]="30" pInputTextarea placeholder="Alamat Mahasiswa" autoResize="autoResize"></textarea>
+          </span>
+        </div>
+        <div></div>
+        <div class="ui-g-12 ui-md-12">
+          <h4>Jenis Kelamin</h4>
+          <div class="ui-g">
+            <div class="ui-g-12 ui-md-4">
+              <p-radioButton name="rg" value="Ultima" label="Pria" [(ngModel)]="radioValue"></p-radioButton>
+            </div>
+            <div class="ui-g-12 ui-md-4">
+              <p-radioButton name="rg" value="Icarus" label="Wanita" [(ngModel)]="radioValue"></p-radioButton>
+            </div>
+          </div>
+        </div>
+        <div class="ui-g-12 ui-md-12"></div>
+        <div class="ui-g-12 ui-md-6">
+          <span class="md-inputfield">
+            <input type="text" pInputText>
+            <label>Username</label>
+          </span>
+        </div>
+        <div class="ui-g-12 ui-md-6">
+          <span class="md-inputfield">
+            <input type="text" pInputText>
+            <label>Password</label>
+          </span>
+        </div>
+        <div class="ui-g-12 ui-md-12"></div>
+        <div class="ui-g-12">
+            <button type="button" label="Save" pButton icon="ui-icon-save"></button>
+        </div>
+      </div>
+    </div>

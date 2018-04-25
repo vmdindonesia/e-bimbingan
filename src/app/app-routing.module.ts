@@ -20,6 +20,10 @@ import { FileComponent } from './file/file.component';
 import { MiscComponent } from './misc/misc.component';
 
 
+// Menu Credential
+import { AddMahasiswaComponent } from './add-mahasiswa/add-mahasiswa.component'
+
+
 // Import Services
 import { AuthGuard } from './../service/service/index';
 
@@ -30,6 +34,7 @@ const routes: Routes = [
   {
     path: '', component: HomeComponent, canActivate: [AuthGuard], children: [
       { path: 'dashboard', component: DashboardComponent },
+      { path: 'add-mahasiswa', component: AddMahasiswaComponent },
       { path: 'home', component: HomeComponent },
       { path: 'not-found', component: NotFoundComponent },
       { path: 'error', component: ErrorComponent },

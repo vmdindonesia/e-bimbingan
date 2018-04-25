@@ -108,6 +108,7 @@ import { MiscComponent } from './misc/misc.component';
 import { TopbarComponent } from './topbar/topbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { MenuComponent, AppSubMenuComponent } from './menu/menu.component';
+import { AddMahasiswaComponent } from './add-mahasiswa/add-mahasiswa.component';
 
 @NgModule({
   declarations: [
@@ -134,7 +135,8 @@ import { MenuComponent, AppSubMenuComponent } from './menu/menu.component';
     TopbarComponent,
     SidebarComponent,
     MenuComponent,
-    AppSubMenuComponent
+    AppSubMenuComponent,
+    AddMahasiswaComponent
   ],
   imports: [
     BrowserModule,
