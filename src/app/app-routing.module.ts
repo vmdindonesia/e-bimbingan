@@ -16,6 +16,9 @@ import { UtilsComponent } from './utils/utils.component';
 import { MessagesComponent } from './messages/messages.component';
 import { FileComponent } from './file/file.component';
 import { MiscComponent } from './misc/misc.component';
+import { AddDosenComponent } from './add-dosen/add-dosen.component';
+import { DaftarMahasiswaComponent } from './daftar-mahasiswa/daftar-mahasiswa.component';
+
 import {ChooseDosenComponent} from './choose-dosen/choose-dosen.component';
 import { FormValidateComponent } from './form-validate/form-validate.component';
 
@@ -34,7 +37,9 @@ const routes: Routes = [
   {
     path: '', component: HomeComponent, canActivate: [AuthGuard], children: [
       { path: 'dashboard', component: DashboardComponent },
+      { path: 'add-dosen', component: AddDosenComponent },
       { path: 'add-mahasiswa', component: AddMahasiswaComponent },
+      { path: 'daftar-mahasiswa', component: DaftarMahasiswaComponent },
       { path: 'list-mhs-daftar', component: ListMhsDaftarComponent },
       { path: 'form-validate', component: FormValidateComponent },
       { path: 'home', component: HomeComponent },
