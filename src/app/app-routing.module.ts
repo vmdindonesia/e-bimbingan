@@ -17,8 +17,8 @@ import { UtilsComponent } from './utils/utils.component';
 import { MessagesComponent } from './messages/messages.component';
 import { FileComponent } from './file/file.component';
 import { MiscComponent } from './misc/misc.component';
+import {ChooseDosenComponent} from './choose-dosen/choose-dosen.component';
 import { FormValidateComponent } from './form-validate/form-validate.component';
-
 
 // Menu Credential
 import { AddMahasiswaComponent } from './add-mahasiswa/add-mahasiswa.component'
@@ -52,7 +52,8 @@ const routes: Routes = [
       { path: 'utils', component: UtilsComponent },
       { path: 'messages', component: MessagesComponent },
       { path: 'file', component: FileComponent },
-      { path: 'misc', component: MiscComponent }
+      { path: 'misc', component: MiscComponent },
+      { path: 'choose-dosen', component: ChooseDosenComponent }
     ]
   },
 ];

@@ -1,0 +1,48 @@
+<div class="ui-g ui-fluid">
+  <div class="ui-g-12 ui-lg-12">
+    <div class="card card-w-title">
+      <h1>Formulir Pengajuan Tugas Akhir</h1>
+      <div class="ui-g form-group">
+        <div class="ui-g-12">
+          <span class="md-inputfield">
+            <input type="text" pInputText>
+            <label>Nama Lengkap</label>
+          </span>
+        </div>
+        <div class="ui-g-12 ui-md-12"></div>
+        <div class="ui-g-12 ui-md-6">
+          <span class="md-inputfield">
+            <input type="number" pInputText>
+            <label>NIM</label>
+          </span>
+        </div>
+        <div class="ui-g-12 ui-md-6 ">
+          <p-dropdown [options]="selectMajors" [autoWidth]="false" [(ngModel)]="selectedMajors"></p-dropdown>
+        </div>
+        <div></div>
+        <div class="ui-g-12 ui-md-12">
+          <p-dropdown [options]="typeofFinaltask" [autoWidth]="false" [(ngModel)]="selectedFinalTask"></p-dropdown>
+        </div>
+        <div class="ui-g-12 ui-md-12"></div>
+        <div class="ui-g-12 ui-md-4">
+          <p-dropdown [options]="lecturerOne" [autoWidth]="false" [(ngModel)]="selectedlecturerOne"></p-dropdown>
+        </div>
+        <div class="ui-g-12 ui-md-4">
+          <p-dropdown [options]="lecturerTwo" [autoWidth]="false" [(ngModel)]="selectedlecturerTwo"></p-dropdown>
+        </div>
+        <div class="ui-g-12 ui-md-4">
+          <p-dropdown [options]="lecturerOptional" [autoWidth]="false" [(ngModel)]="selectedlecturerOptional"></p-dropdown>
+        </div>
+        <div></div>
+        <div class="ui-g-12">
+          <span class="md-inputfield">
+            <input type="text" pInputText>
+            <label>Judul Tugas Akhir</label>
+          </span>
+        </div>
+        <div></div>
+        <div class="ui-g-12">
+          <button type="button" label="Send" pButton icon="ui-icon-save"></button>
+        </div>
+      </div>
+    </div>
