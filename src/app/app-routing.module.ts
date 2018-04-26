@@ -18,6 +18,7 @@ import { UtilsComponent } from './utils/utils.component';
 import { MessagesComponent } from './messages/messages.component';
 import { FileComponent } from './file/file.component';
 import { MiscComponent } from './misc/misc.component';
+import {ChooseDosenComponent} from './choose-dosen/choose-dosen.component';
 
 
 // Menu Credential
@@ -35,6 +36,7 @@ const routes: Routes = [
     path: '', component: HomeComponent, canActivate: [AuthGuard], children: [
       { path: 'dashboard', component: DashboardComponent },
       { path: 'add-mahasiswa', component: AddMahasiswaComponent },
+
       { path: 'home', component: HomeComponent },
       { path: 'not-found', component: NotFoundComponent },
       { path: 'error', component: ErrorComponent },
@@ -49,7 +51,8 @@ const routes: Routes = [
       { path: 'utils', component: UtilsComponent },
       { path: 'messages', component: MessagesComponent },
       { path: 'file', component: FileComponent },
-      { path: 'misc', component: MiscComponent }
+      { path: 'misc', component: MiscComponent },
+      { path: 'choose-dosen', component: ChooseDosenComponent }
     ]
   },
 ];
