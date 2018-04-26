@@ -7,7 +7,6 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { ErrorComponent } from './error/error.component';
 import { EmptyComponent } from './empty/empty.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { SampleComponent } from './sample/sample.component';
 import { FormsComponent } from './forms/forms.component';
 import { DataComponent } from './data/data.component';
 import { PanelsComponent } from './panels/panels.component';
@@ -18,6 +17,8 @@ import { UtilsComponent } from './utils/utils.component';
 import { MessagesComponent } from './messages/messages.component';
 import { FileComponent } from './file/file.component';
 import { MiscComponent } from './misc/misc.component';
+import { AddDosenComponent } from './add-dosen/add-dosen.component';
+import { DaftarMahasiswaComponent } from './daftar-mahasiswa/daftar-mahasiswa.component';
 
 
 // Menu Credential
@@ -34,12 +35,13 @@ const routes: Routes = [
   {
     path: '', component: HomeComponent, canActivate: [AuthGuard], children: [
       { path: 'dashboard', component: DashboardComponent },
+      { path: 'add-dosen', component: AddDosenComponent },
       { path: 'add-mahasiswa', component: AddMahasiswaComponent },
+      { path: 'daftar-mahasiswa', component: DaftarMahasiswaComponent },
       { path: 'home', component: HomeComponent },
       { path: 'not-found', component: NotFoundComponent },
       { path: 'error', component: ErrorComponent },
       { path: 'empty', component: EmptyComponent },
-      { path: 'sample', component: SampleComponent },
       { path: 'forms', component: FormsComponent },
       { path: 'data', component: DataComponent },
       { path: 'panels', component: PanelsComponent },

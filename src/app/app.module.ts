@@ -85,7 +85,6 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { ErrorComponent } from './error/error.component';
 import { EmptyComponent } from './empty/empty.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { SampleComponent } from './sample/sample.component';
 import { FormsComponent } from './forms/forms.component';
 import { DataComponent } from './data/data.component';
 import { PanelsComponent } from './panels/panels.component';
@@ -109,6 +108,8 @@ import { TopbarComponent } from './topbar/topbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { MenuComponent, AppSubMenuComponent } from './menu/menu.component';
 import { AddMahasiswaComponent } from './add-mahasiswa/add-mahasiswa.component';
+import { AddDosenComponent } from './add-dosen/add-dosen.component';
+import { DaftarMahasiswaComponent } from './daftar-mahasiswa/daftar-mahasiswa.component';
 
 @NgModule({
   declarations: [
@@ -121,7 +122,6 @@ import { AddMahasiswaComponent } from './add-mahasiswa/add-mahasiswa.component';
     ErrorComponent,
     EmptyComponent,
     DashboardComponent,
-    SampleComponent,
     FormsComponent,
     DataComponent,
     PanelsComponent,
@@ -136,7 +136,9 @@ import { AddMahasiswaComponent } from './add-mahasiswa/add-mahasiswa.component';
     SidebarComponent,
     MenuComponent,
     AppSubMenuComponent,
-    AddMahasiswaComponent
+    AddMahasiswaComponent,
+    AddDosenComponent,
+    DaftarMahasiswaComponent
   ],
   imports: [
     BrowserModule,
