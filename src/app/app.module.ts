@@ -141,7 +141,7 @@ import { FormValidateComponent } from './form-validate/form-validate.component';
     AppSubMenuComponent,
     AddMahasiswaComponent,
     AddDosenComponent,
-    DaftarMahasiswaComponent
+    DaftarMahasiswaComponent,
     ChooseDosenComponent,
     ListMhsDaftarComponent,
     FormValidateComponent
