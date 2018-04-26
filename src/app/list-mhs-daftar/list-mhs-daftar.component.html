@@ -1,0 +1,14 @@
+<div class="ui-g ui-fluid">
+    <div class="ui-g-12 ui-lg-12">
+        <div class="card card-w-title">
+            <p-dataTable [value]="carouselCars" [style]="{'margin-bottom':'20px'}" selectionMode="single" [selection]="selectedCity">
+                <p-header>Pengajuan Mahasiswa Bimbingan</p-header>
+                <p-column field="mhs" header="Nama Mahasiswa" sortable="true"></p-column>
+                <p-column field="nim" header="Nim Mahasiswa" sortable="true"></p-column>
+                <p-column field="dospemFirst" header="Dosen Pembimbing 1" sortable="true"></p-column>
+                <p-column field="dospemSecond" header="Dosen Pembimbing 2" sortable="true"></p-column>
+                <p-column field="dospemThird" header="Dosen Pembimbing Alternative" sortable="true"></p-column>
+            </p-dataTable>
+        </div>
+    </div>
+</div>

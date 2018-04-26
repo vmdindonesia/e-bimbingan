@@ -22,7 +22,9 @@ export class MenuComponent implements OnInit {
       {
         label: 'Components', icon: 'list',
         items: [
-          { label: 'Tambah Mahasiswa', icon: 'input', routerLink: ['/add-mahasiswa'] }
+          { label: 'Tambah Mahasiswa', icon: 'input', routerLink: ['/add-mahasiswa'] },
+          { label: 'Pengajuan Mahasiswa', icon: 'input', routerLink: ['/list-mhs-daftar'] },
+          { label: 'Validasi Pengajuan', icon: 'input', routerLink: ['/form-validate'] }
         ]
       }
     ];
