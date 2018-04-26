@@ -99,6 +99,7 @@ import { NodeService } from './../service/service/nodeservice';
 import { AuthenticationService } from './../service/service/AuthenticationService';
 import { AuthGuard } from './../service/service/index';
 import { AuthService } from './../service/service/index';
+import { UserService } from './../service/service/index';
 
 import { UtilsComponent } from './utils/utils.component';
 import { MessagesComponent } from './messages/messages.component';
@@ -223,7 +224,8 @@ import { FormValidateComponent } from './form-validate/form-validate.component';
     NodeService,
     AuthenticationService,
     AuthService,
-    AuthGuard
+    AuthGuard,
+    UserService
   ],
   bootstrap: [AppComponent]
 })
