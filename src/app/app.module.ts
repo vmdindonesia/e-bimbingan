@@ -109,6 +109,8 @@ import { TopbarComponent } from './topbar/topbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { MenuComponent, AppSubMenuComponent } from './menu/menu.component';
 import { AddMahasiswaComponent } from './add-mahasiswa/add-mahasiswa.component';
+import { ListMhsDaftarComponent } from './list-mhs-daftar/list-mhs-daftar.component';
+import { FormValidateComponent } from './form-validate/form-validate.component';
 
 @NgModule({
   declarations: [
@@ -136,7 +138,9 @@ import { AddMahasiswaComponent } from './add-mahasiswa/add-mahasiswa.component';
     SidebarComponent,
     MenuComponent,
     AppSubMenuComponent,
-    AddMahasiswaComponent
+    AddMahasiswaComponent,
+    ListMhsDaftarComponent,
+    FormValidateComponent
   ],
   imports: [
     BrowserModule,
