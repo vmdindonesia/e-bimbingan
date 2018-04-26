@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { NotFoundComponent } from './not-found/not-found.component';
@@ -20,9 +19,12 @@ import { MiscComponent } from './misc/misc.component';
 import { AddDosenComponent } from './add-dosen/add-dosen.component';
 import { DaftarMahasiswaComponent } from './daftar-mahasiswa/daftar-mahasiswa.component';
 
+import {ChooseDosenComponent} from './choose-dosen/choose-dosen.component';
+import { FormValidateComponent } from './form-validate/form-validate.component';
 
 // Menu Credential
 import { AddMahasiswaComponent } from './add-mahasiswa/add-mahasiswa.component'
+import { ListMhsDaftarComponent } from './list-mhs-daftar/list-mhs-daftar.component';
 
 
 // Import Services
@@ -38,6 +40,8 @@ const routes: Routes = [
       { path: 'add-dosen', component: AddDosenComponent },
       { path: 'add-mahasiswa', component: AddMahasiswaComponent },
       { path: 'daftar-mahasiswa', component: DaftarMahasiswaComponent },
+      { path: 'list-mhs-daftar', component: ListMhsDaftarComponent },
+      { path: 'form-validate', component: FormValidateComponent },
       { path: 'home', component: HomeComponent },
       { path: 'not-found', component: NotFoundComponent },
       { path: 'error', component: ErrorComponent },
@@ -51,7 +55,8 @@ const routes: Routes = [
       { path: 'utils', component: UtilsComponent },
       { path: 'messages', component: MessagesComponent },
       { path: 'file', component: FileComponent },
-      { path: 'misc', component: MiscComponent }
+      { path: 'misc', component: MiscComponent },
+      { path: 'choose-dosen', component: ChooseDosenComponent }
     ]
   },
 ];

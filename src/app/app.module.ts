@@ -110,6 +110,9 @@ import { MenuComponent, AppSubMenuComponent } from './menu/menu.component';
 import { AddMahasiswaComponent } from './add-mahasiswa/add-mahasiswa.component';
 import { AddDosenComponent } from './add-dosen/add-dosen.component';
 import { DaftarMahasiswaComponent } from './daftar-mahasiswa/daftar-mahasiswa.component';
+import { ChooseDosenComponent } from './choose-dosen/choose-dosen.component';
+import { ListMhsDaftarComponent } from './list-mhs-daftar/list-mhs-daftar.component';
+import { FormValidateComponent } from './form-validate/form-validate.component';
 
 @NgModule({
   declarations: [
@@ -139,6 +142,9 @@ import { DaftarMahasiswaComponent } from './daftar-mahasiswa/daftar-mahasiswa.co
     AddMahasiswaComponent,
     AddDosenComponent,
     DaftarMahasiswaComponent
+    ChooseDosenComponent,
+    ListMhsDaftarComponent,
+    FormValidateComponent
   ],
   imports: [
     BrowserModule,
