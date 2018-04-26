@@ -85,7 +85,6 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { ErrorComponent } from './error/error.component';
 import { EmptyComponent } from './empty/empty.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { SampleComponent } from './sample/sample.component';
 import { FormsComponent } from './forms/forms.component';
 import { DataComponent } from './data/data.component';
 import { PanelsComponent } from './panels/panels.component';
@@ -124,7 +123,6 @@ import { FormValidateComponent } from './form-validate/form-validate.component';
     ErrorComponent,
     EmptyComponent,
     DashboardComponent,
-    SampleComponent,
     FormsComponent,
     DataComponent,
     PanelsComponent,
