@@ -30,5 +30,37 @@ export class UserService {
          })
             .map(data => data);
     }
-}
 
+    isAddDosen(nipDosen: string, selectedMajor: string,
+        fullnameDosen: string, contactDosen: string, addressDosen: string, selectedGender: string, 
+        userName:string, pwdDosen : string, selectedStatus : string ) {
+        console.log(nipDosen,
+            selectedMajor,
+            fullnameDosen,
+            contactDosen,
+            addressDosen,
+            selectedGender,
+            userName,
+            pwdDosen,
+            selectedStatus,'Data Lemparan Form Dosen');
+
+            return this.http.post(CONFIGGLOBAL.API_URL + '/createDosen', {
+                nip: nipDosen,
+                username: userName,
+                password: pwdDosen,
+                fullname: fullnameDosen,
+                no_telpon: contactDosen,
+                jenis_kelamin: selectedGender,
+                alamat :addressDosen,
+                status :selectedStatus,
+                jurusan : selectedMajor
+
+             })
+                .map(data => data);
+        }
+
+        
+
+
+
+}
