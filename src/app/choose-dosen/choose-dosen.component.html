@@ -5,19 +5,22 @@
       <div class="ui-g form-group">
         <div class="ui-g-12">
           <span class="md-inputfield">
-            <input type="text" pInputText>
+            <input type="text" disabled pInputText [(ngModel)]="username">
             <label>Nama Lengkap</label>
           </span>
         </div>
         <div class="ui-g-12 ui-md-12"></div>
         <div class="ui-g-12 ui-md-6">
           <span class="md-inputfield">
-            <input type="number" pInputText>
+            <input type="number" [(ngModel)]="nim" pInputText>
             <label>NIM</label>
           </span>
         </div>
-        <div class="ui-g-12 ui-md-6 ">
-          <p-dropdown [options]="selectMajors" [autoWidth]="false" [(ngModel)]="selectedMajors"></p-dropdown>
+        <div class="ui-g-12 ui-md-6">
+          <span class="md-inputfield">
+            <input type="text" disabled [(ngModel)]="major" pInputText>
+            <label>Jurusan</label>
+          </span>
         </div>
         <div></div>
         <div class="ui-g-12 ui-md-12">
@@ -25,24 +28,24 @@
         </div>
         <div class="ui-g-12 ui-md-12"></div>
         <div class="ui-g-12 ui-md-4">
-          <p-dropdown [options]="lecturerOne" [autoWidth]="false" [(ngModel)]="selectedlecturerOne"></p-dropdown>
+          <p-dropdown [options]="lecturerOne" [autoWidth]="false" [(ngModel)]="lecturerOne"></p-dropdown>
         </div>
         <div class="ui-g-12 ui-md-4">
-          <p-dropdown [options]="lecturerTwo" [autoWidth]="false" [(ngModel)]="selectedlecturerTwo"></p-dropdown>
+          <p-dropdown [options]="lecturerTwo" [autoWidth]="false" [(ngModel)]="lecturerTwo"></p-dropdown>
         </div>
         <div class="ui-g-12 ui-md-4">
-          <p-dropdown [options]="lecturerOptional" [autoWidth]="false" [(ngModel)]="selectedlecturerOptional"></p-dropdown>
+          <p-dropdown [options]="lecturerOptional" [autoWidth]="false" [(ngModel)]="lecturerOptional"></p-dropdown>
         </div>
         <div></div>
         <div class="ui-g-12">
           <span class="md-inputfield">
-            <input type="text" pInputText>
+            <input type="text" pInputText [(ngModel)]="titleTA">
             <label>Judul Tugas Akhir</label>
           </span>
         </div>
         <div></div>
         <div class="ui-g-12">
-          <button type="button" label="Send" pButton icon="ui-icon-save"></button>
+          <button type="button" label="Send" pButton icon="ui-icon-save" (click)="send()"></button>
         </div>
       </div>
     </div>
