@@ -29,7 +29,7 @@ export class UserService {
             judul_ta: titleTA
         };
 
-        return this.http.post(CONFIGGLOBAL.API_URL + '/createBimbingan', { 
+        return this.http.post(CONFIGGLOBAL.API_URL + '/createBimbingan', {
             nim: nim,
             tipe_ta: selectedFinalTask,
             dospem_1: selectedlecturerOne,
