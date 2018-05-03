@@ -20,15 +20,6 @@ export class UserService {
             selectedlecturerOptional,
             titleTA, 'Data Lemparan Form');
 
-        const dataRequest = {
-            nim: nim,
-            tipe_ta: selectedFinalTask,
-            dospem_1: selectedlecturerOne,
-            dospem_2: selectedlecturerTwo,
-            dospem_3: selectedlecturerOptional,
-            judul_ta: titleTA
-        };
-
         return this.http.post(CONFIGGLOBAL.API_URL + '/createBimbingan', {
             nim: nim,
             tipe_ta: selectedFinalTask,
