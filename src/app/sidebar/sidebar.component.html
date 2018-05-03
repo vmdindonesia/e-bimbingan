@@ -33,60 +33,11 @@
       </div>
       <div class="layout-tabmenu-content" [ngClass]="{'layout-tabmenu-content-active': app.activeTabIndex === 1}">
         <div class="layout-submenu-title clearfix">
-          <span>Menu</span>
+          <span>Settings</span>
           <a href="#" class="menu-button material-icons" (click)="app.closeSidebar($event)">menu</a>
         </div>
         <app-sidebarTabContent>
-          <div class="inbox-tab">
-            <ul>
-              <li class="clearfix">
-                <img src="assets/layout/images/avatar1.png" alt="" width="45">
-                <span class="name">Joshua Williams</span>
-                <span class="message">Reports attached</span>
-              </li>
-              <li class="clearfix">
-                <img src="assets/layout/images/avatar1.png" alt="" width="45">
-                <span class="name">Joshua Williams</span>
-                <span class="message">About the meeting</span>
-              </li>
-              <li class="clearfix">
-                <img src="assets/layout/images/avatar2.png" alt="" width="45">
-                <span class="name">Emily Clark</span>
-                <span class="message">TODO Update</span>
-              </li>
-              <li class="clearfix">
-                <img src="assets/layout/images/avatar3.png" alt="" width="45">
-                <span class="name">Tim Johnson</span>
-                <span class="message">Expense Reports</span>
-              </li>
-              <li class="clearfix">
-                <img src="assets/layout/images/avatar4.png" alt="" width="45">
-                <span class="name">David Stark</span>
-                <span class="message">Rating Reviews</span>
-              </li>
-            </ul>
-            <div class="inbox-labels">
-              <span>Labels</span>
-              <ul>
-                <li class="clearfix">
-                  <span class="inbox-label">Work</span>
-                  <span class="inbox-label-badge">4</span>
-                </li>
-                <li class="clearfix">
-                  <span class="inbox-label">Personel</span>
-                  <span class="inbox-label-badge">2</span>
-                </li>
-                <li class="clearfix">
-                  <span class="inbox-label">Shared</span>
-                  <span class="inbox-label-badge">3</span>
-                </li>
-                <li class="clearfix">
-                  <span class="inbox-label">General</span>
-                  <span class="inbox-label-badge">5</span>
-                </li>
-              </ul>
-            </div>
-          </div>
+          <ul app-setting [item]="model" root="true" class="navigation-menu" visible="true"></ul>
         </app-sidebarTabContent>
       </div>
     </div>
