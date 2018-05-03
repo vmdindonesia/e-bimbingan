@@ -16,8 +16,8 @@ export class SidebarComponent implements OnInit {
   public model: any[];
 
   constructor(public app: HomeComponent) {
-    const datas = JSON.parse(localStorage.getItem('VMDDEVELOPER'));
-    this.dataStorage = datas;
+    const datas = localStorage.getItem('VMDDEVELOPER');
+    this.dataStorage = JSON.parse(datas);
   }
 
   ngOnInit() {

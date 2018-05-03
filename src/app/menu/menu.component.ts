@@ -21,8 +21,8 @@ export class MenuComponent implements OnInit {
 
   constructor(
     public app: AppComponent) {
-    const datas = JSON.parse(localStorage.getItem('VMDDEVELOPER'));
-    this.dataStorage = datas;
+    const datas = localStorage.getItem('VMDDEVELOPER');
+    this.dataStorage = JSON.parse(datas);
     console.log(this.dataStorage, 'datanyoo');
 
     this.model = [

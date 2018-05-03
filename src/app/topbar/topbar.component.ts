@@ -16,8 +16,8 @@ export class TopbarComponent implements OnInit {
     public AuthenticationServices: AuthenticationService,
     public app: AppComponent
   ) {
-    const datas = JSON.parse(localStorage.getItem('VMDDEVELOPER'));
-    this.dataStorage = datas;
+    const datas = localStorage.getItem('VMDDEVELOPER');
+    this.dataStorage = JSON.parse(datas);
   }
 
   ngOnInit() {
