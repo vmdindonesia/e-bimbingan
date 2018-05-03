@@ -13,24 +13,88 @@ import { AppComponent } from './../app.component';
 export class MenuComponent implements OnInit {
 
   public model: any[];
+  public modelMahasiswa: any[];
+  public modelDosen: any[];
+  public modelAdmin: any[];
+  public dataStorage: any;
+  public role: any[];
 
-  constructor(public app: AppComponent) { }
+  constructor  (
+    public app: AppComponent) {
+      const datas = JSON.parse(localStorage.getItem('VMDDEVELOPER'));
+      this.dataStorage = datas;
+      console.log(this.dataStorage, 'datanyoo');
+
+      this.model = [
+        { label: 'Dashboard', icon: 'dashboard', routerLink: ['/'] },
+        {
+          label: 'Components', icon: 'list',
+          items: [
+            { label: 'Tambah Mahasiswa', icon: 'input', routerLink: ['/add-mahasiswa'] },
+            { label: 'Tambah Dosen', icon: 'input', routerLink: ['/add-dosen'] },
+            { label: 'Daftar Mahasiswa', icon: 'input', routerLink: ['/daftar-mahasiswa'] },
+            { label: 'Pengajuan Bimbingan', icon: 'input', routerLink: ['/choose-dosen'] },
+            { label: 'Pengajuan Mahasiswa', icon: 'input', routerLink: ['/list-mhs-daftar'] },
+            { label: 'Validasi Pengajuan', icon: 'input', routerLink: ['/form-validate'] }
+          ]
+        }
+      ];
+
+
+      this.modelMahasiswa = [
+        { label: 'Dashboard', icon: 'dashboard', routerLink: ['/'] },
+        {
+          label: 'Components', icon: 'list',
+          items: [
+            { label: 'Tambah Mahasiswa', icon: 'input', routerLink: ['/add-mahasiswa'] },
+            { label: 'Tambah Dosen', icon: 'input', routerLink: ['/add-dosen'] }
+          ]
+        }
+      ];
+
+      this.modelDosen = [
+        { label: 'Dashboard', icon: 'dashboard', routerLink: ['/'] },
+        {
+          label: 'Components', icon: 'list',
+          items: [
+            { label: 'Daftar Mahasiswa', icon: 'input', routerLink: ['/daftar-mahasiswa'] },
+            { label: 'Pengajuan Bimbingan', icon: 'input', routerLink: ['/choose-dosen'] }
+          ]
+        }
+      ];
+
+      this.modelAdmin = [
+        { label: 'Dashboard', icon: 'dashboard', routerLink: ['/'] },
+        {
+          label: 'Components', icon: 'list',
+          items: [
+            { label: 'Pengajuan Mahasiswa', icon: 'input', routerLink: ['/list-mhs-daftar'] },
+            { label: 'Validasi Pengajuan', icon: 'input', routerLink: ['/form-validate'] }
+          ]
+        }
+      ];
+   }
 
   ngOnInit() {
-    this.model = [
-      { label: 'Dashboard', icon: 'dashboard', routerLink: ['/'] },
-      {
-        label: 'Components', icon: 'list',
-        items: [
-          { label: 'Tambah Mahasiswa', icon: 'input', routerLink: ['/add-mahasiswa'] },
-          { label: 'Tambah Dosen', icon: 'input', routerLink: ['/add-dosen'] },
-          { label: 'Daftar Mahasiswa', icon: 'input', routerLink: ['/daftar-mahasiswa'] },
-          { label: 'Pengajuan Bimbingan', icon: 'input', routerLink: ['/choose-dosen'] },
-          { label: 'Pengajuan Mahasiswa', icon: 'input', routerLink: ['/list-mhs-daftar'] },
-          { label: 'Validasi Pengajuan', icon: 'input', routerLink: ['/form-validate'] }
-        ]
-      }
-    ];
+    const roles = this.dataStorage.permission;
+    switch (roles) {
+      case 'mahasiswa':
+        this.role = this.modelMahasiswa;
+        break;
+      case 'dosen':
+        this.role = this.modelDosen;
+        break;
+      case 'admin':
+        this.role = this.modelAdmin;
+        break;
+      default:
+        this.role = this.model;
+    }
+
+
+
+
+
   }
 }
 
