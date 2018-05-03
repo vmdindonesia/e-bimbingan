@@ -19,61 +19,61 @@ export class MenuComponent implements OnInit {
   public dataStorage: any;
   public role: any[];
 
-  constructor  (
+  constructor(
     public app: AppComponent) {
-      const datas = JSON.parse(localStorage.getItem('VMDDEVELOPER'));
-      this.dataStorage = datas;
-      console.log(this.dataStorage, 'datanyoo');
+    const datas = JSON.parse(localStorage.getItem('VMDDEVELOPER'));
+    this.dataStorage = datas;
+    console.log(this.dataStorage, 'datanyoo');
 
-      this.model = [
-        { label: 'Dashboard', icon: 'dashboard', routerLink: ['/'] },
-        {
-          label: 'Components', icon: 'list',
-          items: [
-            { label: 'Tambah Mahasiswa', icon: 'input', routerLink: ['/add-mahasiswa'] },
-            { label: 'Tambah Dosen', icon: 'input', routerLink: ['/add-dosen'] },
-            { label: 'Daftar Mahasiswa', icon: 'input', routerLink: ['/daftar-mahasiswa'] },
-            { label: 'Pengajuan Bimbingan', icon: 'input', routerLink: ['/choose-dosen'] },
-            { label: 'Pengajuan Mahasiswa', icon: 'input', routerLink: ['/list-mhs-daftar'] },
-            { label: 'Validasi Pengajuan', icon: 'input', routerLink: ['/form-validate'] }
-          ]
-        }
-      ];
+    this.model = [
+      { label: 'Dashboard', icon: 'dashboard', routerLink: ['/'] },
+      {
+        label: 'Components', icon: 'list',
+        items: [
+          { label: 'Tambah Mahasiswa', icon: 'input', routerLink: ['/add-mahasiswa'] },
+          { label: 'Tambah Dosen', icon: 'input', routerLink: ['/add-dosen'] },
+          { label: 'Daftar Mahasiswa', icon: 'input', routerLink: ['/daftar-mahasiswa'] },
+          { label: 'Pengajuan Bimbingan', icon: 'input', routerLink: ['/choose-dosen'] },
+          { label: 'Pengajuan Mahasiswa', icon: 'input', routerLink: ['/list-mhs-daftar'] },
+          { label: 'Validasi Pengajuan', icon: 'input', routerLink: ['/form-validate'] }
+        ]
+      }
+    ];
 
 
-      this.modelMahasiswa = [
-        { label: 'Dashboard', icon: 'dashboard', routerLink: ['/'] },
-        {
-          label: 'Components', icon: 'list',
-          items: [
-            { label: 'Tambah Mahasiswa', icon: 'input', routerLink: ['/add-mahasiswa'] },
-            { label: 'Tambah Dosen', icon: 'input', routerLink: ['/add-dosen'] }
-          ]
-        }
-      ];
+    this.modelMahasiswa = [
+      { label: 'Dashboard', icon: 'dashboard', routerLink: ['/'] },
+      {
+        label: 'Components', icon: 'list',
+        items: [
+          { label: 'Tambah Mahasiswa', icon: 'input', routerLink: ['/add-mahasiswa'] },
+          { label: 'Tambah Dosen', icon: 'input', routerLink: ['/add-dosen'] }
+        ]
+      }
+    ];
 
-      this.modelDosen = [
-        { label: 'Dashboard', icon: 'dashboard', routerLink: ['/'] },
-        {
-          label: 'Components', icon: 'list',
-          items: [
-            { label: 'Daftar Mahasiswa', icon: 'input', routerLink: ['/daftar-mahasiswa'] },
-            { label: 'Pengajuan Bimbingan', icon: 'input', routerLink: ['/choose-dosen'] }
-          ]
-        }
-      ];
+    this.modelDosen = [
+      { label: 'Dashboard', icon: 'dashboard', routerLink: ['/'] },
+      {
+        label: 'Components', icon: 'list',
+        items: [
+          { label: 'Daftar Mahasiswa', icon: 'input', routerLink: ['/daftar-mahasiswa'] },
+          { label: 'Pengajuan Bimbingan', icon: 'input', routerLink: ['/choose-dosen'] }
+        ]
+      }
+    ];
 
-      this.modelAdmin = [
-        { label: 'Dashboard', icon: 'dashboard', routerLink: ['/'] },
-        {
-          label: 'Components', icon: 'list',
-          items: [
-            { label: 'Pengajuan Mahasiswa', icon: 'input', routerLink: ['/list-mhs-daftar'] },
-            { label: 'Validasi Pengajuan', icon: 'input', routerLink: ['/form-validate'] }
-          ]
-        }
-      ];
-   }
+    this.modelAdmin = [
+      { label: 'Dashboard', icon: 'dashboard', routerLink: ['/'] },
+      {
+        label: 'Components', icon: 'list',
+        items: [
+          { label: 'Pengajuan Mahasiswa', icon: 'input', routerLink: ['/list-mhs-daftar'] },
+          { label: 'Validasi Pengajuan', icon: 'input', routerLink: ['/form-validate'] }
+        ]
+      }
+    ];
+  }
 
   ngOnInit() {
     const roles = this.dataStorage.permission;
