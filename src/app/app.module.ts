@@ -107,7 +107,7 @@ import { MessagesComponent } from './messages/messages.component';
 import { FileComponent } from './file/file.component';
 import { MiscComponent } from './misc/misc.component';
 import { TopbarComponent } from './topbar/topbar.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
+import { SidebarComponent, AppSettingComponent } from './sidebar/sidebar.component';
 import { MenuComponent, AppSubMenuComponent } from './menu/menu.component';
 import { AddMahasiswaComponent } from './add-mahasiswa/add-mahasiswa.component';
 import { AddDosenComponent } from './add-dosen/add-dosen.component';
@@ -139,6 +139,7 @@ import { FormValidateComponent } from './form-validate/form-validate.component';
     MiscComponent,
     TopbarComponent,
     SidebarComponent,
+    AppSettingComponent,
     MenuComponent,
     AppSubMenuComponent,
     AddMahasiswaComponent,

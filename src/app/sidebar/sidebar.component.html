@@ -11,6 +11,15 @@
           <div class="layout-tabmenu-tooltip-text">Features</div>
         </div>
       </li>
+      <li [ngClass]="{'active-item':app.activeTabIndex === 1}">
+        <a href="#" class="ripplelink tabmenuitem-link" (click)="app.onTabClick($event, 1)">
+          <i class="material-icons">settings_application</i>
+        </a>
+        <div class="layout-tabmenu-tooltip">
+          <div class="layout-tabmenu-tooltip-arrow"></div>
+          <div class="layout-tabmenu-tooltip-text">Features</div>
+        </div>
+      </li>
     </ul>
     <div class="layout-tabmenu-contents">
       <div class="layout-tabmenu-content" [ngClass]="{'layout-tabmenu-content-active': app.activeTabIndex === 0}">
@@ -22,6 +31,14 @@
           <app-menu></app-menu>
         </app-sidebarTabContent>
       </div>
+      <div class="layout-tabmenu-content" [ngClass]="{'layout-tabmenu-content-active': app.activeTabIndex === 1}">
+        <div class="layout-submenu-title clearfix">
+          <span>Settings</span>
+          <a href="#" class="menu-button material-icons" (click)="app.closeSidebar($event)">menu</a>
+        </div>
+        <app-sidebarTabContent>
+          <ul app-setting [item]="model" root="true" class="navigation-menu" visible="true"></ul>
+        </app-sidebarTabContent>
+      </div>
     </div>
   </div>
-</div>
