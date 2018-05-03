@@ -26,7 +26,7 @@ export class MenuComponent implements OnInit {
     console.log(this.dataStorage, 'datanyoo');
 
     this.model = [
-      { label: 'Dashboard', icon: 'dashboard', routerLink: ['/'] },
+      { label: 'Dashboard', icon: 'dashboard', routerLink: ['/dashboard'] },
       {
         label: 'Components', icon: 'list',
         items: [
@@ -42,7 +42,7 @@ export class MenuComponent implements OnInit {
 
 
     this.modelMahasiswa = [
-      { label: 'Dashboard', icon: 'dashboard', routerLink: ['/'] },
+      { label: 'Dashboard', icon: 'dashboard', routerLink: ['/dashboard'] },
       {
         label: 'Components', icon: 'list',
         items: [
@@ -53,7 +53,7 @@ export class MenuComponent implements OnInit {
     ];
 
     this.modelDosen = [
-      { label: 'Dashboard', icon: 'dashboard', routerLink: ['/'] },
+      { label: 'Dashboard', icon: 'dashboard', routerLink: ['/dashboard'] },
       {
         label: 'Components', icon: 'list',
         items: [
@@ -64,7 +64,7 @@ export class MenuComponent implements OnInit {
     ];
 
     this.modelAdmin = [
-      { label: 'Dashboard', icon: 'dashboard', routerLink: ['/'] },
+      { label: 'Dashboard', icon: 'dashboard', routerLink: ['/dashboard'] },
       {
         label: 'Components', icon: 'list',
         items: [
