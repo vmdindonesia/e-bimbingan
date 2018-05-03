@@ -1,33 +1,68 @@
 <div class="ui-g dashboard">
-  <div class="ui-g-12 ui-md-6 ui-lg-3">
-      <div class="ui-g card overview-box overview-box-1">
-          <span class="overview-box-name">Unread Messages</span>
-          <span class="overview-box-count">150</span>
-          <span class="overview-box-badge">+30%</span>
-          <img src="assets/layout/images/dashboard/chart-1.svg" />
-      </div>
-  </div>
-  <div class="ui-g-12 ui-md-6 ui-lg-3">
-      <div class="ui-g card overview-box overview-box-2">
-          <span class="overview-box-name">Check-Ins</span>
-          <span class="overview-box-count">532</span>
-          <span class="overview-box-badge">+45%</span>
-          <img src="assets/layout/images/dashboard/chart-2.svg" />
-      </div>
-  </div>
-  <div class="ui-g-12 ui-md-6 ui-lg-3">
-      <div class="ui-g card overview-box overview-box-3">
-          <span class="overview-box-name">Files Synced</span>
-          <span class="overview-box-count">640</span>
-          <span class="overview-box-badge">-75%</span>
-          <img src="assets/layout/images/dashboard/chart-3.svg" />
-      </div>
-  </div>
-  <div class="ui-g-12 ui-md-6 ui-lg-3">
-      <div class="ui-g card overview-box overview-box-4">
-          <span class="overview-box-name">Users Online</span>
-          <span class="overview-box-count">5251</span>
-          <span class="overview-box-badge">25%</span>
-          <img src="assets/layout/images/dashboard/chart-4.svg" />
-      </div>
-  </div>
+    <div class="ui-g-12 ui-md-6 ui-lg-3">
+        <div class="ui-g card overview-box overview-box-1">
+            <span class="overview-box-name">Unread Messages</span>
+            <span class="overview-box-count">150</span>
+            <span class="overview-box-badge">+30%</span>
+            <img src="assets/layout/images/dashboard/chart-1.svg" />
+        </div>
+    </div>
+    <div class="ui-g-12 ui-md-6 ui-lg-3">
+        <div class="ui-g card overview-box overview-box-2">
+            <span class="overview-box-name">Check-Ins</span>
+            <span class="overview-box-count">532</span>
+            <span class="overview-box-badge">+45%</span>
+            <img src="assets/layout/images/dashboard/chart-2.svg" />
+        </div>
+    </div>
+    <div class="ui-g-12 ui-md-6 ui-lg-3">
+        <div class="ui-g card overview-box overview-box-3">
+            <span class="overview-box-name">Files Synced</span>
+            <span class="overview-box-count">640</span>
+            <span class="overview-box-badge">-75%</span>
+            <img src="assets/layout/images/dashboard/chart-3.svg" />
+        </div>
+    </div>
+    <div class="ui-g-12 ui-md-6 ui-lg-3">
+        <div class="ui-g card overview-box overview-box-4">
+            <span class="overview-box-name">Users Online</span>
+            <span class="overview-box-count">5251</span>
+            <span class="overview-box-badge">25%</span>
+            <img src="assets/layout/images/dashboard/chart-4.svg" />
+        </div>
+    </div>
+
+    <div class="ui-g-12 activity-feed">
+        <p-panel header="ACTIVITY FEED" styleClass="ui-shadow-content">
+            <h3>Last Activity</h3>
+            <p>Updated 1 minute ago</p>
+            <div class="ui-g">
+                <div class="ui-g-12 ui-md-3">
+                    <span>INCOME</span>
+                    <div class="knob income">$900</div>
+                </div>
+                <div class="ui-g-12 ui-md-3">
+                    <span>TAX</span>
+                    <div class="knob tax">$250</div>
+                </div>
+                <div class="ui-g-12 ui-md-3">
+                    <span>INVOICES</span>
+                    <div class="knob invoice">$125</div>
+                </div>
+                <div class="ui-g-12 ui-md-3">
+                    <span>EXPENSES</span>
+                    <div class="knob expense">$250</div>
+                </div>
+            </div>
+        </p-panel>
+    </div>
+
+    <div class="ui-g-12 ui-md-12">
+        <div class="card">
+            <p-panel header="Sales Graph">
+                <div style="overflow:auto">
+                    <p-chart type="line" [data]="chartData" responsive="true"></p-chart>
+                </div>
+            </p-panel>
+        </div>
+    </div>
