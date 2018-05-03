@@ -13,22 +13,31 @@ export class UserService {
 
     isRequestTA(nim: string, selectedFinalTask: string,
         selectedlecturerOne: string, selectedlecturerTwo: string, selectedlecturerOptional: string, titleTA: string) {
-        return this.http.post(CONFIGGLOBAL.API_URL + '/createBimbingan', {
-            nim: nim, tipe_ta: selectedFinalTask, dospem_1: selectedlecturerOne,
-            dospem_2: selectedlecturerTwo, dospem_3: selectedlecturerOptional, judul_ta: titleTA,
-        }).map(res => {
-            console.log(res, 'data');
-        });
+        console.log(nim,
+            selectedFinalTask,
+            selectedlecturerOne,
+            selectedlecturerTwo,
+            selectedlecturerOptional,
+            titleTA, 'Data Lemparan Form');
+
+        const dataRequest = {
+            nim: nim,
+            tipe_ta: selectedFinalTask,
+            dospem_1: selectedlecturerOne,
+            dospem_2: selectedlecturerTwo,
+            dospem_3: selectedlecturerOptional,
+            judul_ta: titleTA
+        };
+
+        return this.http.post(CONFIGGLOBAL.API_URL + '/createBimbingan', { 
+            nim: nim,
+            tipe_ta: selectedFinalTask,
+            dospem_1: selectedlecturerOne,
+            dospem_2: selectedlecturerTwo,
+            dospem_3: selectedlecturerOptional,
+            judul_ta: titleTA
+         })
+            .map(data => data);
     }
-
-
-    getDosen() {
-        return this.http.get(CONFIGGLOBAL.API_URL + '/getListDosen').map(res => {
-            const dataDosen = res.json();
-            console.log(dataDosen, 'Data Dosen');
-        });
-    }
-
-
 }
 

@@ -100,6 +100,7 @@ import { AuthenticationService } from './../service/service/AuthenticationServic
 import { AuthGuard } from './../service/service/index';
 import { AuthService } from './../service/service/index';
 import { UserService } from './../service/service/index';
+import { ListDosenService } from './../service/service/getDosen';
 
 import { UtilsComponent } from './utils/utils.component';
 import { MessagesComponent } from './messages/messages.component';
@@ -229,7 +230,8 @@ import { FormValidateComponent } from './form-validate/form-validate.component';
     AuthenticationService,
     AuthService,
     AuthGuard,
-    UserService
+    UserService,
+    ListDosenService
   ],
   bootstrap: [AppComponent]
 })
