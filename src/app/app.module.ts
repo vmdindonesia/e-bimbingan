@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
 import 'rxjs/add/operator/toPromise';
 
 // Import Component
@@ -224,7 +225,8 @@ import { GuidanceComponent } from './guidance/guidance.component';
     ToolbarModule,
     TooltipModule,
     TreeModule,
-    TreeTableModule
+    TreeTableModule,
+    PdfViewerModule
   ],
   providers: [
     CarService,

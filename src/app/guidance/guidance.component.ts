@@ -12,6 +12,8 @@ export class GuidanceComponent implements OnInit {
 
   public uploadedFiles: any[] = [];
 
+  public pdfSrc: string = '../../assets/Fix.pdf';
+
   constructor() { }
 
   ngOnInit() {
