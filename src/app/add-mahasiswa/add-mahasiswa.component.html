@@ -5,31 +5,31 @@
       <div class="ui-g form-group">
         <div class="ui-g-12 ui-md-6">
           <span class="md-inputfield">
-            <input type="text" pInputText>
+            <input type="text" pInputText [(ngModel)]="nimMhs">
             <label>Nim</label>
           </span>
         </div>
         <div class="ui-g-12 ui-md-6">
-          <p-dropdown [options]="cities" [(ngModel)]="selectedCity1" [autoWidth]="false"></p-dropdown>
+          <p-dropdown [options]="majors" [(ngModel)]="selectedMajor" [autoWidth]="false"></p-dropdown>
           <span class="md-inputfield"> </span>
-      </div>
+        </div>
         <div></div>
         <div class="ui-g-12 ui-md-12">
           <span class="md-inputfield">
-            <input type="text" pInputText>
+            <input type="text" pInputText [(ngModel)]="nameMhs">
             <label>Nama Lengkap</label>
           </span>
         </div>
         <div class="ui-g-12 ui-md-12"></div>
         <div class="ui-g-12 ui-md-6">
           <span class="md-inputfield">
-            <input type="number" pInputText>
+            <input type="number" pInputText [(ngModel)]="phoneMhs">
             <label>No Telepon</label>
           </span>
         </div>
         <div class="ui-g-12 ui-md-6">
           <span class="md-inputfield">
-            <textarea [rows]="1" [cols]="30" pInputTextarea placeholder="Alamat Mahasiswa" autoResize="autoResize"></textarea>
+            <textarea [rows]="1" [cols]="30" pInputTextarea placeholder="Alamat Mahasiswa" autoResize="autoResize" [(ngModel)]="addressMhs"></textarea>
           </span>
         </div>
         <div></div>
@@ -37,29 +37,29 @@
           <h4>Jenis Kelamin</h4>
           <div class="ui-g">
             <div class="ui-g-12 ui-md-4">
-              <p-radioButton name="rg" value="Ultima" label="Pria" [(ngModel)]="radioValue"></p-radioButton>
+              <p-radioButton name="rg" value="pria" label="Pria" [(ngModel)]="selectedGender"></p-radioButton>
             </div>
             <div class="ui-g-12 ui-md-4">
-              <p-radioButton name="rg" value="Icarus" label="Wanita" [(ngModel)]="radioValue"></p-radioButton>
+              <p-radioButton name="rg" value="wanita" label="Wanita" [(ngModel)]="selectedGender"></p-radioButton>
             </div>
           </div>
         </div>
         <div class="ui-g-12 ui-md-12"></div>
         <div class="ui-g-12 ui-md-6">
           <span class="md-inputfield">
-            <input type="text" pInputText>
+            <input type="text" pInputText [(ngModel)]="usernameMhs">
             <label>Username</label>
           </span>
         </div>
         <div class="ui-g-12 ui-md-6">
           <span class="md-inputfield">
-            <input type="text" pInputText>
+            <input type="text" pInputText [(ngModel)]="passwordMhs">
             <label>Password</label>
           </span>
         </div>
         <div class="ui-g-12 ui-md-12"></div>
         <div class="ui-g-12">
-            <button type="button" label="Save" pButton icon="ui-icon-save"></button>
+          <button type="button" label="Save" pButton icon="ui-icon-save" (click)="save()"></button>
         </div>
       </div>
     </div>

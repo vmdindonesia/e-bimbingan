@@ -18,7 +18,7 @@ import { FileComponent } from './file/file.component';
 import { MiscComponent } from './misc/misc.component';
 import { AddDosenComponent } from './add-dosen/add-dosen.component';
 import { DaftarMahasiswaComponent } from './daftar-mahasiswa/daftar-mahasiswa.component';
-
+import {  GuidanceComponent} from './guidance/guidance.component';
 import {ChooseDosenComponent} from './choose-dosen/choose-dosen.component';
 import { FormValidateComponent } from './form-validate/form-validate.component';
 
@@ -56,7 +56,8 @@ const routes: Routes = [
       { path: 'messages', component: MessagesComponent },
       { path: 'file', component: FileComponent },
       { path: 'misc', component: MiscComponent },
-      { path: 'choose-dosen', component: ChooseDosenComponent }
+      { path: 'choose-dosen', component: ChooseDosenComponent },
+      { path: 'guidance', component: GuidanceComponent }
     ]
   },
 ];
