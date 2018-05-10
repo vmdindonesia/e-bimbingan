@@ -47,7 +47,8 @@ export class MenuComponent implements OnInit {
         label: 'Components', icon: 'list',
         items: [
           { label: 'Tambah Mahasiswa', icon: 'input', routerLink: ['/add-mahasiswa'] },
-          { label: 'Tambah Dosen', icon: 'input', routerLink: ['/add-dosen'] }
+          { label: 'Tambah Dosen', icon: 'input', routerLink: ['/add-dosen'] },
+          { label: 'Bimbingan', icon: 'input', routerLink: ['/guidance'] }
         ]
       }
     ];

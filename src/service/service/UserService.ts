@@ -59,6 +59,34 @@ export class UserService {
             .map(data => data);
     }
 
+    isAddMhs(nimMhs: string, selectedMajor: string,
+        nameMhs: string, phoneMhs: string, addressMhs: string,
+        selectedGender: string, usernameMhs: string, passwordMhs: string) {
+        console.log(
+            nimMhs,
+            nameMhs,
+            selectedMajor,
+            addressMhs,
+            phoneMhs,
+            selectedGender,
+            usernameMhs,
+            passwordMhs, 'Data Lemparan Form Mahasiswa');
+
+        return this.http.post(CONFIGGLOBAL.API_URL + '/createMahasiswa', {
+            nim: nimMhs,
+            username: usernameMhs,
+            password: passwordMhs,
+            fullname: nameMhs,
+            no_telpon: phoneMhs,
+            jenis_kelamin: selectedGender,
+            jurusan: selectedMajor,
+            alamat: addressMhs
+
+        })
+            .pipe(data => data);
+    }
+
+
 
 
 

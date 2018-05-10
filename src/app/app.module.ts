@@ -115,6 +115,7 @@ import { DaftarMahasiswaComponent } from './daftar-mahasiswa/daftar-mahasiswa.co
 import { ChooseDosenComponent } from './choose-dosen/choose-dosen.component';
 import { ListMhsDaftarComponent } from './list-mhs-daftar/list-mhs-daftar.component';
 import { FormValidateComponent } from './form-validate/form-validate.component';
+import { GuidanceComponent } from './guidance/guidance.component';
 
 @NgModule({
   declarations: [
@@ -147,7 +148,8 @@ import { FormValidateComponent } from './form-validate/form-validate.component';
     DaftarMahasiswaComponent,
     ChooseDosenComponent,
     ListMhsDaftarComponent,
-    FormValidateComponent
+    FormValidateComponent,
+    GuidanceComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,20 @@
+.layout-wrapper {
+        
+    .footer {
+        padding: .5em;
+        
+        .footer-text-left {
+            float: left;
+        }
+        
+        .footer-text-right {
+            color: $textSecondaryColor;
+            float: right;
+            
+            span {
+                vertical-align: middle;
+                display: inline-block;
+            }
+        }
+    }
+}
