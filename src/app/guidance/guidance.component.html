@@ -4,7 +4,8 @@
             <h1>Upload</h1>
             <p-growl [value]="msgs"></p-growl>
 
-            <p-fileUpload name="demo[]" url="./upload.php" (onUpload)="onUpload($event)" multiple="multiple" accept="application/pdf" maxFileSize="1000000">
+            <p-fileUpload name="demo[]" url="./upload.php" (onUpload)="onUpload($event)" multiple="multiple" accept="application/pdf"
+                maxFileSize="1000000">
                 <ng-template pTemplate="content">
                     <ul *ngIf="uploadedFiles.length">
                         <li *ngFor="let file of uploadedFiles">{{file.name}} - {{file.size}} bytes</li>
@@ -85,75 +86,17 @@
     <div class="ui-g-6">
         <div class="card timeline ui-fluid">
             <div class="ui-g">
-                <div class="ui-g-3">
-                    <span class="event-time">just now</span>
-                    <i class="material-icons" style="color:#009688">&#xE1BC;</i>
-                </div>
-                <div class="ui-g-9">
-                    <span class="event-owner" style="color:#009688">Katherine May</span>
-                    <span class="event-text">Lorem ipsun dolor amet</span>
-                    <div class="event-content">
-                        <img src="assets/layout/images/dashboard/bridge.png">
-                    </div>
-                </div>
-
-                <div class="ui-g-3">
-                    <span class="event-time">12h ago</span>
-                    <i class="material-icons" style="color:#E91E63">&#xE885;</i>
-                </div>
-                <div class="ui-g-9">
-                    <span class="event-owner" style="color:#E91E63">Brandon Santos</span>
-                    <span class="event-text">Ab nobis, magnam sunt eum. Laudantium, repudiandae, similique!.</span>
-                </div>
-
-                <div class="ui-g-3">
-                    <span class="event-time">15h ago</span>
-                    <i class="material-icons" style="color:#9c27b0">&#xE0C9;</i>
-                </div>
-                <div class="ui-g-9">
-                    <span class="event-owner" style="color:#9c27b0">Stephan Ward</span>
-                    <span class="event-text">Omnis veniam quibusdam ratione est repellat qui nam quisquam ab mollitia dolores ullam voluptates, similique,
-                        dignissimos.
-                    </span>
-                </div>
-
-                <div class="ui-g-3">
-                    <span class="event-time">2d ago</span>
-                    <i class="material-icons" style="color:#ff9800">&#xE0C8;</i>
-                </div>
-                <div class="ui-g-9">
-                    <span class="event-owner" style="color:#ff9800">Jason Smith</span>
-                    <span class="event-text">Laudantium, repudiandae, similique!</span>
-                    <div class="event-content">
-                        <img src="assets/layout/images/dashboard/map.png">
-                    </div>
-                </div>
-
-                <div class="ui-g-3">
-                    <span class="event-time">1w ago</span>
-                    <i class="material-icons" style="color:#607d8b">&#xE91B;</i>
-                </div>
-                <div class="ui-g-9">
-                    <span class="event-owner">Kevin Cox</span>
-                    <span class="event-text">Quibusdam ratione est repellat qui nam quisquam veniam quibusdam ratione.</span>
-                </div>
-
-                <div class="ui-g-3">
-                    <span class="event-time">2w ago</span>
-                    <i class="material-icons" style="color:#FFC107">&#xE23A;</i>
-                </div>
-                <div class="ui-g-9">
-                    <span class="event-owner" style="color:#FFC107">Walter White</span>
-                    <span class="event-text">I am the one who knocks!</span>
-                </div>
+                <pdf-viewer [src]="pdfSrc" [render-text]="true" style="display: block;" [original-size]="false" [fit-to-page]="true" 
+                [render-text]="true" [zoom]="1" [autoresize]="true" [page]="1"
+                ></pdf-viewer>
 
                 <div class="ui-g-12">
-                    <p-panel header="Chat" styleClass="ui-shadow-content">
+                    <p-panel header="Saran Revisi" styleClass="ui-shadow-content">
                         <div class="activity-header">
                             <div class="ui-g">
                                 <div class="ui-g-12">
                                     <span class="md-inputfield">
-                                        <textarea [rows]="5" [cols]="30" pInputTextarea placeholder="Isi Saran Revisi" autoResize="autoResize" [(ngModel)]="addressDosen"></textarea>
+                                        <textarea [rows]="5" [cols]="30" pInputTextarea placeholder="Type a massage" autoResize="autoResize" [(ngModel)]="addressDosen"></textarea>
                                     </span>
                                 </div>
                             </div>
